@@ -9,6 +9,7 @@ public class OpticalMarkReaderMain {
         System.out.println("Loading pdf at " + pathToPdf);
 
         /*
+        =)
         Your code here to...
         (1).  Load the pdf
         (2).  Loop over its pages
