@@ -1,12 +1,25 @@
 import javax.swing.*;
 import java.io.File;
+import FileIO.*;
+import Filters.DisplayInfoFilter;
+import core.DImage;
+import processing.core.PImage;
 
 // Author: David Dobervich (this is my edit)
 // ANOTHER EDIT.
 public class OpticalMarkReaderMain {
     public static void main(String[] args) {
-        String pathToPdf = fileChooser();
-        System.out.println("Loading pdf at " + pathToPdf);
+//        String pathToPdf = fileChooser();
+//        System.out.println("Loading pdf at " + pathToPdf);
+
+        PImage in = PDFHelper.getPageImage("assets/omrtest.pdf",1);
+        DImage img = new DImage(in);       // you can make a DImage from a PImage
+
+        DisplayInfoFilter filter = new DisplayInfoFilter();
+        String result = filter.getAnswersFrom(img);
+//        filter.processImage(img);
+
+        PDFHelper test = new PDFHelper();
 
         /*
         =)
