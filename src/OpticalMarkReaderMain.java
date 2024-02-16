@@ -21,16 +21,31 @@ public class OpticalMarkReaderMain {
 
         PDFHelper test = new PDFHelper();
 
-        /*
-        =)
-        Your code here to...
-        (1).  Load the pdf
-        (2).  Loop over its pages
-        (3).  Create a DImage from each page and process its pixels
-        (4).  Output 2 csv files
-         */
+
+
+
+
+
+
+//        (2).  Loop over its pages
+//        (3).  Create a DImage from each page and process its pixels
+//        (4).  Output 2 csv files
+//
 
     }
+//    private static void RunTheFilter() {
+//        System.out.println("Loading pdf....");// you can make a DImage from a PImage
+//
+//        System.out.println("Running filter on page 1....");
+//        DisplayInfoFilter filter = new DisplayInfoFilter();
+//        for (int i = 1; i <= 3; i++) {
+//            PImage in = PDFHelper.getPageImage("assets/OfficialOMRSampleDoc.pdf", i);
+//            DImage img = new DImage(in);
+//            filter.processImage(img);  // if you want, you can make a different method
+//            // that does the image processing an returns a DTO with
+//            // the information you want
+//        }
+//    }
 
     private static String fileChooser() {
         String userDirLocation = System.getProperty("user.dir");
