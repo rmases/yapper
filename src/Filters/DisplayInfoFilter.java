@@ -15,7 +15,7 @@ public class DisplayInfoFilter implements PixelFilter {
         short[][] grid = img.getBWPixelGrid();
         //ArrayList<String> answerList = new ArrayList<>();
         grid = crop(grid, 0, 0, 800, 500);
-        String answers = SkibbidyBabyGronk(grid, 12, 105, 105);
+        String answers = checkPaper(grid, 12, 105, 105);
         return answers;
     }
 
@@ -24,7 +24,7 @@ public class DisplayInfoFilter implements PixelFilter {
         short[][] grid = img.getBWPixelGrid();
         ArrayList<String> answerList = new ArrayList<>();
         grid = crop(grid, 0, 0, 800, 500);
-        System.out.println(SkibbidyBabyGronk(grid, 12, 105, 105));
+        System.out.println(checkPaper(grid, 12, 105, 105));
         int answer1 = scanQuestion(grid, 105, 105);
 
 
@@ -59,7 +59,7 @@ public class DisplayInfoFilter implements PixelFilter {
         return img;
     }
 
-    public String SkibbidyBabyGronk(short[][] grid, int numQuestions, int r, int c){
+    public String checkPaper(short[][] grid, int numQuestions, int r, int c){
         String answers = "";
         for (int i = 0; i < numQuestions; i++){
             answers += scanQuestion(grid, r + (i*50), c);
